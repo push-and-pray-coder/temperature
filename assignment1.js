@@ -25,7 +25,7 @@ weatherCondition = "Heavy snow";
 safetyRecommendation = "Bundle up and stay indoors if possible";
 
 console.log(`
-    Report 1
+    Report 2
 
     ====================
     ${title}
