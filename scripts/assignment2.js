@@ -3,14 +3,14 @@ const city ="San Diego";
 
 //step 1. Create a function and C and converts it to F
 function celsiusToFarenheit(celsius){
-    return celsius * 2;
+    return (celsius * 9/5) + 32;
 }
 //step 2. Create a var fo each day with C
-let mondayC = 50;
+let mondayC = 45;
 let tuesdayC = 40;
-let wednesdayC = 30;
-let thursdayC = 45;
-let fridayC = 35;
+let wednesdayC = 20;
+let thursdayC = 35;
+let fridayC = 15;
 
 //step 3. Call the function for every day
 let mondayF = celsiusToFarenheit(mondayC);
