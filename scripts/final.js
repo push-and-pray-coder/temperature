@@ -14,7 +14,7 @@ function convertTemperature(temperature,scale,i){
         document.getElementById("temperature-output").innerHTML += `<tr><td>${days[i]}</td><td>${temperature}C | ${(temperature * 9/5) + 32}F</td></tr>`;
     }
     else{
-        document.getElementById("temperature-output").innerHTML += `Invalid scale`;
+        document.getElementById("temperature-output").innerHTML = `Invalid scale`;
     }
 }
 
