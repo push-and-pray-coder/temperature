@@ -6,11 +6,22 @@ const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
 let scale = prompt("Enter the scale: C or F ");
 
 
-for(let i=0; i<7; i++){
-    let temp = prompt("Enter the temp " + i); // getting the temp
-    temperatures.push(temp);// adding elements to the array
+function convertTemperature(temperature,scale,i){
+    if (scale=="F"){
+        document.getElementById("temperature-output").innerHTML += `<tr><td>${days[i]}</td><td>${(temperature -32) * (5/9)}C | ${temperature}F</td></tr>`;
+    }
+    else if (scale=="C"){
+        document.getElementById("temperature-output").innerHTML += `<tr><td>${days[i]}</td><td>${temperature}C | ${(temperature * 9/5) + 32}F</td></tr>`;
+    }
+    else{
+        document.getElementById("temperature-output").innerHTML += `Invalid scale`;
+    }
+}
 
-    document.getElementById("array-temps").innerHTML += `<p>${days[i]} ${temperatures[i]} ${scale}</p>`;
+for(let i=0; i<7; i++){
+    let temp = prompt(`Enter the temperature on ${days[i]}`); // getting the temp
+    temperatures.push(temp);// adding elements to the array
+    convertTemperature(temperatures[i],scale,i);
 }
 
 console.log(temperatures);
